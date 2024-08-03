@@ -1,6 +1,10 @@
-use rand::Rng; //
+//
 use std::cmp::Ordering;
-use std::io; // импортирование библиотеки вводы-вывода из scope - std
+use std::io;
+
+use rand::Rng;
+
+// импортирование библиотеки вводы-вывода из scope - std
 
 fn main() {
     // A guessing game
@@ -16,7 +20,7 @@ fn main() {
     // Data types
     program_6();
 }
-
+#[allow(dead_code)]
 fn program_1() {
     // placeholder - заполнитель
     let x: u64 = 10;
@@ -67,6 +71,7 @@ fn program_1() {
     }
 }
 
+#[allow(dead_code)]
 fn program_2() {
     let x = 5;
     println!("Значение x равно {}", x);
@@ -80,13 +85,14 @@ fn program_2() {
     y = 6;
     println!("Значение y равно {}", y);
 }
-
+#[allow(dead_code)]
 fn program_3() {
     // Требуется обязательное явное указание типа переменной
     const MAX_POINTS: i32 = 100_000;
 }
 
 // Внутриблочное затенение переменной
+#[allow(dead_code)]
 fn program_4() {
     let x = 5;
     println!("Значение x = {x}");
@@ -105,11 +111,13 @@ fn program_4() {
     // exp = exp.len();
 }
 
+#[allow(dead_code)]
 fn program_5() {
     // Здесь требуется указывать аннотацию типа
     let guess: i32 = "42".parse().expect("asd");
     println!("{}", guess)
 }
 
+#[allow(dead_code)]
 // Data types
 fn program_6() {}
