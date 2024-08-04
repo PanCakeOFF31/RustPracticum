@@ -1,4 +1,4 @@
-// Control flow: if,
+// Control flow: if
 fn main() {
     // if-expression with single condition and let-if
     // program_1();
