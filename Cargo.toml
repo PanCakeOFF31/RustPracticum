@@ -1,0 +1,158 @@
+[package]
+name = "rust_practicum"
+version = "0.1.0"
+authors = ["mak.blinov.original@yandex.ru"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# В .toml - всё, что следует за заголовком "[...]" является частью этой секции
+[dependencies]
+# library crate - содержит код, для использования в других программах
+# SemVer - semantic versioning: ^0.8.5 - не ниже указанной версии, но не выше 0.9.0
+# "0.8.5" - semantic version sprecifier
+rand = "0.8.5"
+
+# ==============================================================================
+# [exercise]
+[[bin]]
+name = "elve_recovering"
+path = "exercise/test_task/src/elve_recovering.rs"
+
+# ==============================================================================
+# [rust_lang]
+[[bin]]
+name = "rust_lang_p_1"
+path = "rust_lang/p_1_functions.rs"
+
+# ==============================================================================
+# [older]
+
+[[bin]]
+name = "older"
+path = "older/older.rs"
+
+[[bin]]
+name = "older_chapter_3"
+path = "older/chapter_3/chapter_3.rs"
+
+[[bin]]
+name = "older_chapter_4"
+path = "older/chapter_4/chapter_4.rs"
+
+[[bin]]
+name = "older_chapter_5"
+path = "older/chapter_5/chapter_5.rs"
+
+# ==============================================================================
+# [rust_book]
+
+# [chapter-1]
+[[bin]]
+name = "ch_1_p_1"
+path = "rust_book/ch_1_getting_started/p_1.rs"
+
+[[bin]]
+name = "ch_1_p_2"
+path = "rust_book/ch_1_getting_started/p_2.rs"
+
+# [chapter-2]
+[[bin]]
+name = "ch_2_free"
+path = "rust_book/ch_2_guessing_game/free.rs"
+
+[[bin]]
+name = "ch_2_p_1"
+path = "rust_book/ch_2_guessing_game/p_1.rs"
+
+[[bin]]
+name = "ch_2_p_2"
+path = "rust_book/ch_2_guessing_game/p_2.rs"
+
+[[bin]]
+name = "ch_2_p_3"
+path = "rust_book/ch_2_guessing_game/p_3.rs"
+
+[[bin]]
+name = "ch_2_p_4"
+path = "rust_book/ch_2_guessing_game/p_4.rs"
+
+# [chapter-3]
+[[bin]]
+name = "ch_3_free"
+path = "rust_book/ch_3_common/free.rs"
+
+[[bin]]
+name = "ch_3_p_1"
+path = "rust_book/ch_3_common/p_1_vars_constants.rs"
+
+[[bin]]
+name = "ch_3_p_2"
+path = "rust_book/ch_3_common/p_2_shadowing.rs"
+
+[[bin]]
+name = "ch_3_p_3"
+path = "rust_book/ch_3_common/p_3_data_types.rs"
+
+[[bin]]
+name = "ch_3_p_4"
+path = "rust_book/ch_3_common/p_4_data_types.rs"
+
+[[bin]]
+name = "ch_3_p_5"
+path = "rust_book/ch_3_common/p_5_data_types.rs"
+
+# [chapter-4]
+[[bin]]
+name = "ch_4_free"
+path = "rust_book/ch_4_functions/free.rs"
+
+[[bin]]
+name = "ch_4_p_1"
+path = "rust_book/ch_4_functions/p_1_functions.rs"
+
+[[bin]]
+name = "ch_4_p_2"
+path = "rust_book/ch_4_functions/p_2_comments.rs"
+
+[[bin]]
+name = "ch_4_p_3"
+path = "rust_book/ch_4_functions/p_3_control_flow.rs"
+
+[[bin]]
+name = "ch_4_p_4"
+path = "rust_book/ch_4_functions/p_4_loops.rs"
+
+# [chapter-5]
+[[bin]]
+name = "ch_5_free"
+path = "rust_book/ch_5_ownership/free.rs"
+
+[[bin]]
+name = "ch_5_exp_p_1"
+path = "rust_book/ch_5_ownership/experiment/p_1_ownership.rs"
+
+[[bin]]
+name = "ch_5_exp_p_2"
+path = "rust_book/ch_5_ownership/experiment/p_2_ref_borrow.rs"
+
+[[bin]]
+name = "ch_5_p_1"
+path = "rust_book/ch_5_ownership/p_1_rules.rs"
+
+[[bin]]
+name = "ch_5_p_2"
+path = "rust_book/ch_5_ownership/p_2_memory.rs"
+
+[[bin]]
+name = "ch_5_p_3"
+path = "rust_book/ch_5_ownership/p_3_functions.rs"
+
+[[bin]]
+name = "ch_5_p_4"
+path = "rust_book/ch_5_ownership/p_4_borrowing.rs"
+
+[[bin]]
+name = "ch_5_p_5"
+path = "rust_book/ch_5_ownership/p_5_slices.rs"
+
+# ==============================================================================
