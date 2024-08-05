@@ -136,6 +136,10 @@ name = "ch_5_exp_p_2"
 path = "rust_book/ch_5_ownership/experiment/p_2_ref_borrow.rs"
 
 [[bin]]
+name = "ch_5_exp_p_3"
+path = "rust_book/ch_5_ownership/experiment/p_3_fixing_erros.rs"
+
+[[bin]]
 name = "ch_5_p_1"
 path = "rust_book/ch_5_ownership/p_1_rules.rs"
 

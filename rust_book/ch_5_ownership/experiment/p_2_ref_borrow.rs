@@ -17,7 +17,21 @@ fn main() {
 
     // Permissions on Paths: Read, Write, Own
     // program_7();
-    program_8()
+    // program_8()
+    // program_9()
+
+    // Mutable references
+    // program_10()
+
+    // Permissions are returned at the nd of a reference's lifetime
+    // program_11();
+    // program_12();
+
+    // Data must outlive all of its references
+    // program_13();
+
+    // Missing lifetime specifier
+    program_14();
 }
 
 // move-only API problem
@@ -127,7 +141,7 @@ fn program_6() {
     println!("vector: {:?}", vector);
 
     let mut v = vec![1, 2, 3];
-    let num = &v[2]; // immutable reference - alias
+    let _num = &v[2]; // immutable reference - alias
 
     v.push(4); // mutable reference - mutation
 
@@ -145,22 +159,123 @@ fn program_7() {
     _a += 1;
 
     // [RWO]
-    let mut v = vec![15, 30, 45];
+    let v = vec![15, 30, 45];
     println!("v: {:?}", v);
 
+    // slice -> v [R] - данные из вектора могут быть только считаны
+    // Манипулирование самой ссылкой: [RO]
+    // Разыменование ссылки: [R]
     let slice = &v[2];
+    println!("slice: {}", *slice);
 
-    // [R] - only read
-    let num = slice;
-    println!("num: {}", *num);
-
-    // [RWO]
+    // Значение в векторе -> [R] - only read
+    // Но так как это Copy trait, то происходит копирование
     let value = *slice;
     println!("value: {value}");
 }
 
+// Permissions on Paths: Read, Write, Own
 #[allow(dead_code)]
 fn program_8() {
-    let x = 0;
-    let mut x_ref = &x;
+    let x = Box::new("any string".to_string());
+    println!("{}", *x); // Явное разыменование указателя
+    println!("{}", x); // Неявное разыменование указателя
+
+    // Move value from x to y
+    let y = *x;
+    println!("{y}");
+    // Разыменование x приводит к получению String, который Drop trait
+    // println!("{x}");
+}
+
+//
+#[allow(dead_code)]
+fn program_9() {
+    let v = vec![1, 2, 3];
+    let _number = v[2]; // type `i32` implements the `Copy` trait
+
+    // let mut v = vec![String::from("asd"), String::from("asd")];
+    // let str = v[2]; // type `String` not implements the `Copy` trait
+}
+// Mutable references
+#[allow(dead_code)]
+fn program_10() {
+    // arr - shared reference or immutable reference
+    let _arr = [1, 2, 3];
+    // v - unique reference or mutable reference
+    let mut v = vec![1, 2, 3];
+    println!("v: {:?}", v);
+
+    v[2] = 155;
+    println!("v: {:?}", v);
+
+    let num = &mut v[2];
+    *num += 155;
+    println!("{num}");
+    // println!("v: {:?}", v);
+
+    let num_2 = &*num;
+    // *num += 100;
+    println!("num: {num}, num_2: {num_2}");
+}
+
+// Permissions are returned at the nd of a reference's lifetime
+#[allow(dead_code)]
+fn program_11() {
+    let mut vector = vec!['a', 'b', 'c'];
+    println!("vector: {:?}", vector);
+
+    ascii_capitalize(&mut vector);
+    fn ascii_capitalize(v: &mut Vec<char>) {
+        let character = &v[0];
+
+        if character.is_ascii_lowercase() {
+            let uppercase_character = character.to_ascii_uppercase();
+            v[0] = uppercase_character;
+        } else {
+            println!("Already capitalized: {:?}", v)
+        }
+    }
+
+    println!("vector: {:?}", vector);
+}
+
+#[allow(dead_code)]
+fn program_12() {
+    let mut arr = [1, 2, 3];
+    let num = &mut arr[1];
+
+    // let x = 10 + arr[2];
+    // println!("{:?}", arr);
+    println!("{num}");
+}
+
+//
+// Data must outlive all of its references
+#[allow(dead_code)]
+fn program_13() {
+    let s = String::from("asd");
+    let s_ref = &s;
+
+    // Функция drop ожидает, что у переменной будет O-permission
+    // drop(s); // cannot move out
+    println!("{s_ref}");
+}
+
+// Missing lifetime specifier
+#[allow(dead_code)]
+fn program_14() {
+    let _strings: Vec<String> = vec![];
+    let _default = String::from("default string");
+
+    // first_or(&_strings, &_default);
+
+    // Missing  lifetime specifier
+    // fn first_or(strings: &Vec<String>, default: &String) -> &String {
+    //     if !strings.is_empty() {
+    //         &strings[0]
+    //     } else {
+    //         default
+    //     }
+    // }
 }
