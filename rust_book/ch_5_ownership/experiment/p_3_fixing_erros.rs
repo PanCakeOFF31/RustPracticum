@@ -1,5 +1,6 @@
 use std::rc::Rc;
 
+// Fixing ownership errors
 fn main() {
     // Returning a reference to a data.
     // Data must outlive all of its references
@@ -19,7 +20,7 @@ fn main() {
 
     // Mutating different array elements
     // program_6();
-    program_7();
+    // program_7();
 }
 
 // Returning a reference to a data

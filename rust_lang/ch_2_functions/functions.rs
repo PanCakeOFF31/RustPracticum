@@ -1,13 +1,13 @@
 fn main() {
-    program_1();
+    // program_1();
     program_2();
-    program_3();
+    // program_3();
 }
 
 #[allow(dead_code)]
 fn program_1() {
     fn call_me(num: i32) {
-        for i in 0..num {
+        for i in 0..=num {
             println!("Ring! Call number {}", i + 1);
         }
     }

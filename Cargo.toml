@@ -1,3 +1,79 @@
+bin = [
+    # ==============================================================================
+    # [exercise]
+    { name = "elve_recovering", path = "exercise/test_task/src/elve_recovering.rs" },
+    # ==============================================================================
+    # [rust_lang]
+    { name = "rust_lang_ch_1", path = "rust_lang/ch_1_variables/variables.rs" },
+    { name = "rust_lang_ch_2", path = "rust_lang/ch_2_functions/functions.rs" },
+    { name = "rust_lang_ch_3", path = "rust_lang/ch_3_if/if.rs" },
+    { name = "rust_lang_ch_4", path = "rust_lang/ch_4_primitives/primitives.rs" },
+    # ==============================================================================
+    # [older]
+    { name = "older", path = "older/older.rs" },
+    { name = "older_chapter_3", path = "older/chapter_3/chapter_3.rs" },
+    { name = "older_chapter_4", path = "older/chapter_4/chapter_4.rs" },
+    { name = "older_chapter_5", path = "older/chapter_5/chapter_5.rs" },
+    # ==============================================================================
+    # [rust_book]
+    ## [chapter-1(getting_started)]
+    { name = "ch_1_p_1", path = "rust_book/ch_1_getting_started/p_1.rs" },
+    { name = "ch_1_p_2", path = "rust_book/ch_1_getting_started/p_2.rs" },
+    # [chapter-2(guessing_game)]
+    { name = "ch_2_free", path = "rust_book/ch_2_guessing_game/free.rs" },
+    { name = "ch_2_p_1", path = "rust_book/ch_2_guessing_game/p_1.rs" },
+    { name = "ch_2_p_2", path = "rust_book/ch_2_guessing_game/p_2.rs" },
+    { name = "ch_2_p_3", path = "rust_book/ch_2_guessing_game/p_3.rs" },
+    { name = "ch_2_p_4", path = "rust_book/ch_2_guessing_game/p_4.rs" },
+    ## [chapter-3(common)]
+    { name = "ch_3_free", path = "rust_book/ch_3_common/free.rs" },
+    { name = "ch_3_p_1", path = "rust_book/ch_3_common/p_1_vars_constants.rs" },
+    { name = "ch_3_p_2", path = "rust_book/ch_3_common/p_2_shadowing.rs" },
+    { name = "ch_3_p_3", path = "rust_book/ch_3_common/p_3_data_types.rs" },
+    { name = "ch_3_p_4", path = "rust_book/ch_3_common/p_4_data_types.rs" },
+    { name = "ch_3_p_5", path = "rust_book/ch_3_common/p_5_data_types.rs" },
+    ## [chapter-4(functions)]
+    { name = "ch_4_free", path = "rust_book/ch_4_functions/free.rs" },
+    { name = "ch_4_p_1", path = "rust_book/ch_4_functions/p_1_functions.rs" },
+    { name = "ch_4_p_2", path = "rust_book/ch_4_functions/p_2_comments.rs" },
+    { name = "ch_4_p_3", path = "rust_book/ch_4_functions/p_3_control_flow.rs" },
+    { name = "ch_4_p_4", path = "rust_book/ch_4_functions/p_4_loops.rs" },
+    ## [chapter-5(ownership/borrowing)]
+    { name = "ch_5_free", path = "rust_book/ch_5_ownership/free.rs" },
+    { name = "ch_5_p_1", path = "rust_book/ch_5_ownership/p_1_rules.rs" },
+    { name = "ch_5_p_2", path = "rust_book/ch_5_ownership/p_2_memory.rs" },
+    { name = "ch_5_p_3", path = "rust_book/ch_5_ownership/p_3_functions.rs" },
+    { name = "ch_5_p_4", path = "rust_book/ch_5_ownership/p_4_borrowing.rs" },
+    { name = "ch_5_p_5", path = "rust_book/ch_5_ownership/p_5_slices.rs" },
+    ## [chapter-5/experiment(ownership/borrowing)]
+    { name = "ch_5_exp_p_1", path = "rust_book/ch_5_ownership/experiment/p_1_ownership.rs" },
+    { name = "ch_5_exp_p_2", path = "rust_book/ch_5_ownership/experiment/p_2_ref_borrow.rs" },
+    { name = "ch_5_exp_p_3", path = "rust_book/ch_5_ownership/experiment/p_3_fixing_erros.rs" },
+    { name = "ch_5_exp_p_4", path = "rust_book/ch_5_ownership/experiment/p_4_slice.rs" },
+    { name = "ch_5_exp_p_5", path = "rust_book/ch_5_ownership/experiment/p_5_recap.rs" },
+    ## [chapter-6(structs)]
+    { name = "ch_6_structs", path = "rust_book/ch_6_structs/free.rs" },
+    { name = "ch_6_p_1", path = "rust_book/ch_6_structs/p_1_structure.rs" },
+    { name = "ch_6_p_2", path = "rust_book/ch_6_structs/p_2_example.rs" },
+    { name = "ch_6_p_3", path = "rust_book/ch_6_structs/p_3_method.rs" },
+    ## [chapter-7(enums)]
+    { name = "enums", path = "rust_book/ch_7_enums/free.rs" },
+    { name = "ch_7_p_1", path = "rust_book/ch_7_enums/p_1.rs" },
+    { name = "ch_7_p_2", path = "rust_book/ch_7_enums/p_2.rs" },
+    { name = "ch_7_p_3", path = "rust_book/ch_7_enums/p_3.rs" },
+    ## [chapter-8(grow)]
+    { name = "ch_8_structs", path = "rust_book/ch_8_grow/free.rs" },
+    { name = "ch_8_p_1", path = "rust_book/ch_8_grow/p_1.rs" },
+    { name = "ch_8_p_2", path = "rust_book/ch_8_grow/p_2.rs" },
+    { name = "ch_8_p_3", path = "rust_book/ch_8_grow/p_3.rs" },
+]
+
+test = [
+    # ==============================================================================
+    # [lib]
+    { name = "lib_tests", path = "lib/assistant_test.rs" },
+]
+
 [package]
 name = "rust_practicum"
 version = "0.1.0"
@@ -11,152 +87,4 @@ edition = "2021"
 # SemVer - semantic versioning: ^0.8.5 - не ниже указанной версии, но не выше 0.9.0
 # "0.8.5" - semantic version sprecifier
 rand = "0.8.5"
-
-# ==============================================================================
-# [exercise]
-[[bin]]
-name = "elve_recovering"
-path = "exercise/test_task/src/elve_recovering.rs"
-
-# ==============================================================================
-# [rust_lang]
-[[bin]]
-name = "rust_lang_p_1"
-path = "rust_lang/p_1_functions.rs"
-
-# ==============================================================================
-# [older]
-
-[[bin]]
-name = "older"
-path = "older/older.rs"
-
-[[bin]]
-name = "older_chapter_3"
-path = "older/chapter_3/chapter_3.rs"
-
-[[bin]]
-name = "older_chapter_4"
-path = "older/chapter_4/chapter_4.rs"
-
-[[bin]]
-name = "older_chapter_5"
-path = "older/chapter_5/chapter_5.rs"
-
-# ==============================================================================
-# [rust_book]
-
-# [chapter-1]
-[[bin]]
-name = "ch_1_p_1"
-path = "rust_book/ch_1_getting_started/p_1.rs"
-
-[[bin]]
-name = "ch_1_p_2"
-path = "rust_book/ch_1_getting_started/p_2.rs"
-
-# [chapter-2]
-[[bin]]
-name = "ch_2_free"
-path = "rust_book/ch_2_guessing_game/free.rs"
-
-[[bin]]
-name = "ch_2_p_1"
-path = "rust_book/ch_2_guessing_game/p_1.rs"
-
-[[bin]]
-name = "ch_2_p_2"
-path = "rust_book/ch_2_guessing_game/p_2.rs"
-
-[[bin]]
-name = "ch_2_p_3"
-path = "rust_book/ch_2_guessing_game/p_3.rs"
-
-[[bin]]
-name = "ch_2_p_4"
-path = "rust_book/ch_2_guessing_game/p_4.rs"
-
-# [chapter-3]
-[[bin]]
-name = "ch_3_free"
-path = "rust_book/ch_3_common/free.rs"
-
-[[bin]]
-name = "ch_3_p_1"
-path = "rust_book/ch_3_common/p_1_vars_constants.rs"
-
-[[bin]]
-name = "ch_3_p_2"
-path = "rust_book/ch_3_common/p_2_shadowing.rs"
-
-[[bin]]
-name = "ch_3_p_3"
-path = "rust_book/ch_3_common/p_3_data_types.rs"
-
-[[bin]]
-name = "ch_3_p_4"
-path = "rust_book/ch_3_common/p_4_data_types.rs"
-
-[[bin]]
-name = "ch_3_p_5"
-path = "rust_book/ch_3_common/p_5_data_types.rs"
-
-# [chapter-4]
-[[bin]]
-name = "ch_4_free"
-path = "rust_book/ch_4_functions/free.rs"
-
-[[bin]]
-name = "ch_4_p_1"
-path = "rust_book/ch_4_functions/p_1_functions.rs"
-
-[[bin]]
-name = "ch_4_p_2"
-path = "rust_book/ch_4_functions/p_2_comments.rs"
-
-[[bin]]
-name = "ch_4_p_3"
-path = "rust_book/ch_4_functions/p_3_control_flow.rs"
-
-[[bin]]
-name = "ch_4_p_4"
-path = "rust_book/ch_4_functions/p_4_loops.rs"
-
-# [chapter-5]
-[[bin]]
-name = "ch_5_free"
-path = "rust_book/ch_5_ownership/free.rs"
-
-[[bin]]
-name = "ch_5_exp_p_1"
-path = "rust_book/ch_5_ownership/experiment/p_1_ownership.rs"
-
-[[bin]]
-name = "ch_5_exp_p_2"
-path = "rust_book/ch_5_ownership/experiment/p_2_ref_borrow.rs"
-
-[[bin]]
-name = "ch_5_exp_p_3"
-path = "rust_book/ch_5_ownership/experiment/p_3_fixing_erros.rs"
-
-[[bin]]
-name = "ch_5_p_1"
-path = "rust_book/ch_5_ownership/p_1_rules.rs"
-
-[[bin]]
-name = "ch_5_p_2"
-path = "rust_book/ch_5_ownership/p_2_memory.rs"
-
-[[bin]]
-name = "ch_5_p_3"
-path = "rust_book/ch_5_ownership/p_3_functions.rs"
-
-[[bin]]
-name = "ch_5_p_4"
-path = "rust_book/ch_5_ownership/p_4_borrowing.rs"
-
-[[bin]]
-name = "ch_5_p_5"
-path = "rust_book/ch_5_ownership/p_5_slices.rs"
-
 # ==============================================================================

@@ -1,5 +1,3 @@
-use std::num::ParseIntError;
-
 fn main() {
     // Variable declaration
     // program_1();

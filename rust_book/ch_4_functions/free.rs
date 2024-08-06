@@ -1,5 +1,3 @@
-use rand::Rng;
-
 fn main() {
     let condition = true;
     // mut is not require

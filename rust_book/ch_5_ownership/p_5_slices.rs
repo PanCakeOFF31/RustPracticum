@@ -9,6 +9,7 @@ fn main() {
     // program_4();
     // Other slices
     // program_5();
+    // Slice is
 }
 
 #[allow(dead_code)]
@@ -118,7 +119,7 @@ fn program_5() {
     );
 
     let mut my_string = String::from("Hello");
-    let my_str: &mut str = (&mut my_string).as_mut();
+    let _my_str: &mut str = (&mut my_string).as_mut();
     let my_str = &mut my_string[..];
     println!("{my_str}");
 }

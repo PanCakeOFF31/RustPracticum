@@ -262,19 +262,17 @@ fn find_first_improved(s: &str) -> &str {
 // other slices
 fn program_10() {
     log_info("crate::main::program_10");
-    
-    let a = [1,2,3,4,6];
+
+    let a = [1, 2, 3, 4, 6];
     let slice: &[i32] = &a[0..3];
-    
+
     println!("{:?}, {:?}", a, slice);
 }
-
-
 
 // slice type repetition
 fn program_11() {
     log_info("crate::main::program_11");
-    
+
     log("");
     {
         let s = "hello world".to_string();
