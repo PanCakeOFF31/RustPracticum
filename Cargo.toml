@@ -57,15 +57,33 @@ bin = [
     { name = "ch_6_p_2", path = "rust_book/ch_6_structs/p_2_example.rs" },
     { name = "ch_6_p_3", path = "rust_book/ch_6_structs/p_3_method.rs" },
     ## [chapter-7(enums)]
-    { name = "enums", path = "rust_book/ch_7_enums/free.rs" },
-    { name = "ch_7_p_1", path = "rust_book/ch_7_enums/p_1.rs" },
-    { name = "ch_7_p_2", path = "rust_book/ch_7_enums/p_2.rs" },
-    { name = "ch_7_p_3", path = "rust_book/ch_7_enums/p_3.rs" },
+    { name = "ch_7_free", path = "rust_book/ch_7_enums/free.rs" },
+    { name = "ch_7_p_1", path = "rust_book/ch_7_enums/p_1_option.rs" },
+    { name = "ch_7_p_2", path = "rust_book/ch_7_enums/p_2_match.rs" },
+    { name = "ch_7_p_2_1", path = "rust_book/ch_7_enums/p_2_match_ownership.rs" },
+    { name = "ch_7_p_3", path = "rust_book/ch_7_enums/p_3_if_let.rs" },
     ## [chapter-8(grow)]
-    { name = "ch_8_structs", path = "rust_book/ch_8_grow/free.rs" },
-    { name = "ch_8_p_1", path = "rust_book/ch_8_grow/p_1.rs" },
-    { name = "ch_8_p_2", path = "rust_book/ch_8_grow/p_2.rs" },
-    { name = "ch_8_p_3", path = "rust_book/ch_8_grow/p_3.rs" },
+    { name = "ch_8_free", path = "rust_book/ch_8_grow/free.rs" },
+    { name = "ch_8_p_1", path = "rust_book/ch_8_grow/p_1_structure/src/p_1.rs" },
+    { name = "ch_8_p_2", path = "rust_book/ch_8_grow/p_2_mix/p_2.rs" },
+    { name = "ch_8_p_3", path = "rust_book/ch_8_grow/p_3_struct_enum/p_3.rs" },
+    { name = "ch_8_p_4", path = "rust_book/ch_8_grow/p_4_paths/p_4.rs" },
+    { name = "ch_8_p_5", path = "rust_book/ch_8_grow/p_5_separating/p_5.rs" },
+    ## [chapter-9()]
+    { name = "ch_9_free", path = "rust_book/ch_9/free.rs" },
+    { name = "ch_9_p_1", path = "rust_book/ch_9/p_1.rs" },
+    { name = "ch_9_p_2", path = "rust_book/ch_9/p_2.rs" },
+    { name = "ch_9_p_3", path = "rust_book/ch_9/p_3.rs" },
+    ## [chapter-10()]
+    { name = "ch_10_free", path = "rust_book/ch_10/free.rs" },
+    { name = "ch_10_p_1", path = "rust_book/ch_10/p_1.rs" },
+    { name = "ch_10_p_2", path = "rust_book/ch_10/p_2.rs" },
+    { name = "ch_10_p_3", path = "rust_book/ch_10/p_3.rs" },
+    ## [template()]
+    #    { name = "ch_10_free", path = "rust_book/ch_10/free.rs" },
+    #    { name = "ch_10_p_1", path = "rust_book/ch_10/p_1.rs" },
+    #    { name = "ch_10_p_2", path = "rust_book/ch_10/p_2.rs" },
+    #    { name = "ch_10_p_3", path = "rust_book/ch_10/p_3.rs" },
 ]
 
 test = [
