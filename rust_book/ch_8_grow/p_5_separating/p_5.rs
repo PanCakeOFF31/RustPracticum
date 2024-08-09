@@ -1,3 +1,5 @@
+// Объявляю публичный модуль - crate::front_of_house
+pub mod front_of_house;
 fn main() {
     // program_1();
     // program_2();
